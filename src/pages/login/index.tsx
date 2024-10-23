@@ -31,6 +31,9 @@ import { Zoom, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { SubmitHandler } from 'react-hook-form'
 
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { styled, useTheme } from '@mui/material/styles'
+
 const schema = yup.object().shape({
   password: yup.string().required()
 })
@@ -115,6 +118,25 @@ const LoginPage = () => {
     setDataOptionLogin(tmpdata)
   }
 
+  const theme = useTheme()
+
+  const hidden = useMediaQuery(theme.breakpoints.down('md'))
+
+  // const imageSource = skin === 'bordered' ? 'auth-v2-login-illustration-bordered' : 'auth-v2-login-illustration'
+
+  const LoginIllustration = styled('img')(({ theme }) => ({
+  zIndex: 2,
+  maxHeight: 680,
+  marginTop: theme.spacing(12),
+  marginBottom: theme.spacing(12),
+  [theme.breakpoints.down(1540)]: {
+    maxHeight: 550
+  },
+  [theme.breakpoints.down('lg')]: {
+    maxHeight: 500
+  }
+}))
+
   useEffect(() => {
     initFirst()
   }, [])
@@ -184,17 +206,24 @@ const LoginPage = () => {
   }
 
   return (
-    <Box
-      className='content-center'
-      sx={{
-        backgroundImage: `linear-gradient(to bottom, rgba(60, 179, 113, 0.8), rgba(0, 128, 128, 0.8))`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center top',
-        height: '100%'
-      }}
-
-    >
+    <Box className='content-right' sx={{ backgroundColor: 'background.paper' }}>
+      {!hidden ? (
+        <Box
+          sx={{
+            flex: 1,
+            display: 'flex',
+            position: 'relative',
+            alignItems: 'center',
+            borderRadius: '20px',
+            justifyContent: 'center',
+            backgroundColor: 'customColors.bodyBg',
+            margin: theme => theme.spacing(8, 0, 8, 8)
+          }}
+        >
+           <LoginIllustration alt='login-illustration' src={`/images/diskominfo/banner-off.png`} sx={{ width: '100%', height: '100%' }}/>
+          {/* <LoginIllustration alt='login-illustration' src={`/images/pages/${imageSource}-${theme.palette.mode}.png`} /> */}
+        </Box>
+      ) : null}
       <Box
         sx={{
           padding: '10px',
@@ -208,10 +237,9 @@ const LoginPage = () => {
       >
         <Box sx={{ mt: 5 }}>
           <img
-            src={'/images/diskominfo/Lambang_Kabupaten_Bogor.png'}
+            src={'/images/diskominfo/logodiskanak.png'}
             alt='Logo'
-            width={'110'}
-            height={'135'}
+            width={'200'}
             style={{
               maxWidth: '100%',
               maxHeight: '100vh',
@@ -222,10 +250,9 @@ const LoginPage = () => {
             }}
           />
           <img
-            src={'/images/diskominfo/app_kosmos2.png'}
+            src={'/images/diskominfo/textlogosimpeg.png'}
             alt='Logo'
             width={'320'}
-            height={'60'}
             style={{
               display: 'block',
               marginBottom: '20px',
@@ -234,14 +261,14 @@ const LoginPage = () => {
             }}
           />
         </Box>
-        <Box>
+        {/* <Box>
           <Typography
             variant='h1'
             sx={{ mb: 1.5, textAlign: 'center', color: 'black', fontSize: '20px', marginTop: '5px' }}
           >
             {`Login Sebagai`}
           </Typography>
-        </Box>
+        </Box> */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
           <Button
             variant='contained'
@@ -292,7 +319,7 @@ const LoginPage = () => {
                 setSelectedOptionNonAsn(newValue)
               }
             }}
-            renderInput={params => <TextField {...params} label='-- Pilih --' />}
+            renderInput={params => <TextField {...params} label='-- Pilih Pegawai --' />}
           />
         </Box>
 

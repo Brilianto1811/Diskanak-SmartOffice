@@ -106,14 +106,14 @@ const VerticalNavHeader = (props: Props) => {
       ) : (
         <LinkStyled href={`/${isasn}/dashboard`}>
           <img
-            src={'/images/diskominfo/Lambang_Kabupaten_Bogor.png'}
+            src={'/images/diskominfo/logodiskanak.png'}
             alt='Logo'
-            width={'40'}
-            height={'50'}
+            width={'70'}
+            height={'80'}
             style={{
               display: 'block',
               margin: '0 auto',
-              marginLeft: '-3px',
+              marginLeft: '-18px',
               textAlign: 'center',
               verticalAlign: 'middle'
             }}
@@ -123,14 +123,15 @@ const VerticalNavHeader = (props: Props) => {
             sx={{ ...menuCollapsedStyles, ...(navCollapsed && !navHover ? {} : { ml: 2.5 }), marginTop: '2px' }}
           >
             <img
-              src={'/images/diskominfo/app_kosmos2.png'}
+              src={'/images/diskominfo/textlogosimpeg.png'}
               alt='Logo'
-              width={'150'}
-              height={'50'}
+              width={'160'}
+              height={'40'}
               style={{
                 display: 'block',
                 margin: '0 auto',
-                marginTop: '3px',
+                marginTop: '-8px',
+                marginLeft: '-18px',
                 textAlign: 'center',
                 verticalAlign: 'middle'
               }}
