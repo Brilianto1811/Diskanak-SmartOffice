@@ -187,12 +187,13 @@ const LoginPage = () => {
     <Box
       className='content-center'
       sx={{
-        backgroundImage: `linear-gradient(to bottom, rgba(166, 247, 123, 0.8), rgba(45, 189, 110, 0.8))`,
+        backgroundImage: `linear-gradient(to bottom, rgba(60, 179, 113, 0.8), rgba(0, 128, 128, 0.8))`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         backgroundPosition: 'center top',
         height: '100%'
       }}
+
     >
       <Box
         sx={{
