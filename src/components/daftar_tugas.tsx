@@ -488,7 +488,7 @@ const CardDaftarTugas = () => {
               <span style={{ fontSize: '0.875rem', marginTop: '5px', color: 'black' }}>Daftar Tugas dari Atasan.</span>
             </>
           }
-          style={{ backgroundColor: '#f5d99d', textAlign: 'center', borderRadius: '8px' }}
+          style={{ backgroundColor: '#FBDB65', textAlign: 'center', borderRadius: '8px' }}
           // ice blue #a2d2df cheese #FBDB65 Blonde #F0E2B6
 
         />
