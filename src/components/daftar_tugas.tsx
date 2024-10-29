@@ -485,7 +485,7 @@ const CardDaftarTugas = () => {
           title={
             <>
               <span style={{ color: 'black' }}>Daftar Tugas</span> <br />
-              <span style={{ fontSize: '0.875rem', marginTop: '5px', color: 'black' }}>Daftar Tugas dari Atasan.</span>
+              <span style={{ fontSize: '0.875rem', marginTop: '5px', color: '#555' }}>Daftar Tugas dari Atasan.</span>
             </>
           }
           style={{ backgroundColor: '#FBDB65', textAlign: 'center', borderRadius: '8px' }}

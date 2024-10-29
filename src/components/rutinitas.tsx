@@ -520,7 +520,7 @@ const TableRutinitas = () => {
               </span>
             </>
           }
-          style={{ backgroundColor: '#AFE1AF', textAlign: 'center' }}
+          style={{ backgroundColor: '#FBDB65', textAlign: 'center' }}
         />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>

@@ -95,7 +95,7 @@ const GalleryKegiatan = () => {
               </span>
             </>
           }
-          style={{ backgroundColor: '#AFE1AF', textAlign: 'center', borderRadius: '8px' }}
+          style={{ backgroundColor: '#FBDB65', textAlign: 'center', borderRadius: '8px' }}
         />
       </div>
       <Divider style={{ margin: '10px 0' }} />
