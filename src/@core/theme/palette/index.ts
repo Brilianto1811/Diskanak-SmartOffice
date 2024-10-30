@@ -27,10 +27,10 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
       light: lightColor,
       lightPaperBg: whiteColor,
       darkPaperBg: darkPaperBgColor,
-      bodyBg: mode === 'light' ? '#F8F7FA' : '#25293C', // Same as palette.background.default but doesn't consider bordered skin
-      trackBg: mode === 'light' ? '#F1F0F2' : '#363B54',
-      avatarBg: mode === 'light' ? '#DBDADE' : '#4A5072',
-      tableHeaderBg: mode === 'light' ? '#F6F6F7' : '#4A5072'
+      bodyBg: mode === 'light' ? '#f8f7fa' : '##25293c', // Same as palette.background.default but doesn't consider bordered skin
+      trackBg: mode === 'light' ? '#f1f0f2' : '#363b54',
+      avatarBg: mode === 'light' ? '#dbdade' : '#4a5072',
+      tableHeaderBg: mode === 'light' ? '#f6f6f7' : '#4a5072'
     },
     mode: mode,
     common: {
@@ -38,9 +38,9 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
       white: whiteColor
     },
     primary: {
-      light: '#8479F2',
-      main: '#7367F0',
-      dark: '#655BD3',
+      light: '#f2a179',
+      main: '#7367f0',
+      dark: '#655bd3',
       contrastText: whiteColor
     },
     secondary: {

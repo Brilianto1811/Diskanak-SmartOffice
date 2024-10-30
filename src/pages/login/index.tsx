@@ -124,17 +124,17 @@ const LoginPage = () => {
   // const imageSource = skin === 'bordered' ? 'auth-v2-login-illustration-bordered' : 'auth-v2-login-illustration'
 
   const LoginIllustration = styled('img')(({ theme }) => ({
-  zIndex: 2,
-  maxHeight: 680,
-  marginTop: theme.spacing(12),
-  marginBottom: theme.spacing(12),
-  [theme.breakpoints.down(1540)]: {
-    maxHeight: 550
-  },
-  [theme.breakpoints.down('lg')]: {
-    maxHeight: 500
-  }
-}))
+    zIndex: 2,
+    maxHeight: 680,
+    marginTop: theme.spacing(12),
+    marginBottom: theme.spacing(12),
+    [theme.breakpoints.down(1540)]: {
+      maxHeight: 550
+    },
+    [theme.breakpoints.down('lg')]: {
+      maxHeight: 500
+    }
+  }))
 
   useEffect(() => {
     initFirst()
@@ -205,7 +205,7 @@ const LoginPage = () => {
   }
 
   return (
-    <Box className='content-right' sx={{ backgroundColor: 'background.paper' }}>
+    <Box className='content-right' sx={{ backgroundImage: 'url(/images/diskominfo/depandiskanak.jpg)', }}>
       {!hidden ? (
         <Box
           sx={{
@@ -213,25 +213,25 @@ const LoginPage = () => {
             display: 'flex',
             position: 'relative',
             alignItems: 'center',
-            borderRadius: '20px',
             justifyContent: 'center',
-            backgroundColor: 'customColors.bodyBg',
             margin: theme => theme.spacing(8, 0, 8, 8)
           }}
         >
-           <LoginIllustration alt='login-illustration' src={`/images/diskominfo/logodiskanak.png`} sx={{height: '100%' }}/>
+          {/* <LoginIllustration alt='login-illustration' src={`/images/diskominfo/depandiskanak.jpg`} sx={{height: '100%' }}/> */}
           {/* <LoginIllustration alt='login-illustration' src={`/images/pages/${imageSource}-${theme.palette.mode}.png`} /> */}
         </Box>
       ) : null}
       <Box
         sx={{
-          padding: '10px',
+          padding: '50px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          backgroundColor: '#EEEBE3',
-          borderRadius: '20px'
+          color: 'white',
+          transition: 'all 0.25s ease-in-out',
+          backgroundColor: 'background.paper',
+          opacity: 1
         }}
       >
         <Box sx={{ mt: 5 }}>
@@ -249,9 +249,9 @@ const LoginPage = () => {
             }}
           />
           <img
-            src={'/images/diskominfo/textlogosimpeg.png'}
+            src={'/images/diskominfo/logoems.png'}
             alt='Logo'
-            width={'320'}
+            width={'200'}
             style={{
               display: 'block',
               marginBottom: '20px',
@@ -271,7 +271,7 @@ const LoginPage = () => {
         <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
           <Button
             variant='contained'
-            color={isasn ? 'success' : 'secondary'}
+            color={isasn ? 'warning' : 'secondary'}
             sx={{
               height: '40px',
               width: '150px',
@@ -286,7 +286,7 @@ const LoginPage = () => {
           </Button>
           <Button
             variant='contained'
-            color={!isasn ? 'success' : 'secondary'}
+            color={!isasn ? 'warning' : 'secondary'}
             sx={{
               height: '40px',
               width: '150px',
@@ -318,7 +318,17 @@ const LoginPage = () => {
                 setSelectedOptionNonAsn(newValue)
               }
             }}
-            renderInput={params => <TextField {...params} label='-- Pilih Pegawai --' />}
+            renderInput={params => (
+              <TextField
+                {...params}
+                label='-- Pilih Pegawai --'
+                sx={{
+                  '& .MuiInputBase-input': { color: 'black' },        // Changes text color to black
+                  '& .MuiInputLabel-root': { color: 'black' },         // Changes label color to black
+                  '& .MuiOutlinedInput-notchedOutline': { borderColor: 'black' }  // Changes border color to black
+                }}
+              />
+            )}
           />
         </Box>
 
@@ -340,6 +350,12 @@ const LoginPage = () => {
                   error={Boolean(errors.password)}
                   {...(errors.password && { helperText: errors.password.message })}
                   type={showPassword ? 'text' : 'password'}
+                  sx={{
+                    '& .MuiInputBase-input': { color: 'black' },           // Input text color
+                    '& .MuiInputLabel-root': { color: 'black' },           // Label text color
+                    '& .MuiOutlinedInput-notchedOutline': { borderColor: 'black' }, // Outline border color
+                    '& .MuiFormHelperText-root': { color: 'black' }        // Helper text color
+                  }}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position='end'>
@@ -365,7 +381,7 @@ const LoginPage = () => {
               type='submit'
               variant='contained'
               sx={{
-                backgroundColor: '#2DBD6E',
+                backgroundColor: '#ffa500',
                 color: 'white',
                 mb: 5,
                 mt: 5

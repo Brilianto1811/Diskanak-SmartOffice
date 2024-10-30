@@ -123,15 +123,14 @@ const VerticalNavHeader = (props: Props) => {
             sx={{ ...menuCollapsedStyles, ...(navCollapsed && !navHover ? {} : { ml: 2.5 }), marginTop: '2px' }}
           >
             <img
-              src={'/images/diskominfo/textlogosimpeg.png'}
+              src={'/images/diskominfo/logoems.png'}
               alt='Logo'
-              width={'160'}
-              height={'40'}
+              width={'120'}
+              height={'100'}
               style={{
                 display: 'block',
                 margin: '0 auto',
-                marginTop: '-8px',
-                marginLeft: '-18px',
+                // marginLeft: '-px',
                 textAlign: 'center',
                 verticalAlign: 'middle'
               }}
