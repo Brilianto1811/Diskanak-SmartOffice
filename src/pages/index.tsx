@@ -13,10 +13,7 @@ const CardWithCollapse = ({ sx }: { sx?: BoxProps['sx'] }) => {
         className="content-right"
         sx={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/diskominfo/depandiskanak.jpg)`,
-          // backgroundSize: 'cover',
           backgroundPosition: 'center',
-          // width: '100%',
-          // minHeight: '100vh',
           color: 'white',
         }}
       >

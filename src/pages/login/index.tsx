@@ -121,8 +121,6 @@ const LoginPage = () => {
 
   const hidden = useMediaQuery(theme.breakpoints.down('md'))
 
-  // const imageSource = skin === 'bordered' ? 'auth-v2-login-illustration-bordered' : 'auth-v2-login-illustration'
-
   const LoginIllustration = styled('img')(({ theme }) => ({
     zIndex: 2,
     maxHeight: 680,
@@ -209,10 +207,6 @@ const LoginPage = () => {
       className="content-right"
       sx={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/diskominfo/depandiskanak.jpg)`,
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
-        // width: '100%',
-        // minHeight: '100vh',
         color: 'white',
       }}
     >
@@ -371,8 +365,8 @@ const LoginPage = () => {
             />
           </Box>
           <Box sx={{ width: 325 }}>
-            <ReCAPTCHA sitekey='6LcqlQApAAAAAG8L-MgTHY9xmuTF8BQABAad5pFv' onChange={handleCaptchaChange} />
-            {/* 6LfTHG8qAAAAAFMpdIOEJKgKDn1GWmXgBY5lqrYN */}
+            <ReCAPTCHA sitekey='6LfTHG8qAAAAAFMpdIOEJKgKDn1GWmXgBY5lqrYN' onChange={handleCaptchaChange} />
+            {/* 6LcqlQApAAAAAG8L-MgTHY9xmuTF8BQABAad5pFv */}
             <Button
               fullWidth
               type='submit'
