@@ -81,12 +81,12 @@ const CardSnippet = (props: CardSnippetProps) => {
         {...(hidden
           ? {}
           : {
-              action: (
-                <IconButton onClick={() => setShowCode(!showCode)}>
-                  <Icon icon='tabler:code' fontSize={20} />
-                </IconButton>
-              )
-            })}
+            action: (
+              <IconButton onClick={() => setShowCode(!showCode)}>
+                <Icon icon='tabler:code' fontSize={20} />
+              </IconButton>
+            )
+          })}
       />
       <CardContent>{children}</CardContent>
       {hidden ? null : (

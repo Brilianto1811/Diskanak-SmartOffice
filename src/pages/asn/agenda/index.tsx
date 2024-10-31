@@ -371,7 +371,7 @@ const AgendaASN = () => {
           }}
           sx={{
             backgroundColor: '#50C878',
-            color: 'black',
+            color: 'white',
             borderColor: '#03C04A',
             '&:hover': {
               color: 'black' // Warna teks saat tombol dihover
@@ -416,7 +416,7 @@ const AgendaASN = () => {
       />
 
       <Dialog open={open} onClose={handleCloseDialog}>
-        <DialogTitle style={{ textAlign: 'center', backgroundColor: '#50C878', marginTop: '-15px', fontSize: '20px' }}>
+        <DialogTitle style={{ textAlign: 'center', backgroundColor: '#f5b758', marginTop: '-15px', fontSize: '20px' }}>
           Tambah Agenda
         </DialogTitle>
         <Divider style={{ margin: '10px 0', marginTop: '10px' }} />
@@ -494,8 +494,8 @@ const AgendaASN = () => {
                   <FormControlLabel value='0' control={<Radio />} label='Tidak Menggunakan Ruang Rapat' />
                   <FormControlLabel value='7' control={<Radio />} label='RR Kepala Dinas' />
                   <FormControlLabel value='8' control={<Radio />} label='RR Sekertaris Dinas' />
-                  <FormControlLabel value='9' control={<Radio />} label='RR Bidang Aptika' />
-                  <FormControlLabel value='10' control={<Radio />} label='RR Bidang IT' />
+                  <FormControlLabel value='9' control={<Radio />} label='RR Internal 1' />
+                  <FormControlLabel value='10' control={<Radio />} label='RR Internal 2' />
                   <FormControlLabel value='11' control={<Radio />} label='Aula Dinas' />
                 </RadioGroup>
               </div>

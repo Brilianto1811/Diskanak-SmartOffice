@@ -10,13 +10,14 @@ const CardWithCollapse = ({ sx }: { sx?: BoxProps['sx'] }) => {
   return (
     <>
       <Box
-        className='content-center'
+        className="content-right"
         sx={{
-          backgroundImage: `linear-gradient(to bottom, rgba(166, 247, 123, 0.8), rgba(45, 189, 110, 0.8))`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'center top',
-          height: '100vh'
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/diskominfo/depandiskanak.jpg)`,
+          // backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          // width: '100%',
+          // minHeight: '100vh',
+          color: 'white',
         }}
       >
         <Box
@@ -30,10 +31,10 @@ const CardWithCollapse = ({ sx }: { sx?: BoxProps['sx'] }) => {
           }}
         >
           <img
-            src={'/images/diskominfo/Lambang_Kabupaten_Bogor.png'}
+            src={'/images/diskominfo/logoutama.png'}
             alt='Logo'
-            width={'138'}
-            height={'170'}
+            width={'225'}
+            height={'150'}
             style={{
               display: 'block',
               margin: '0 auto',

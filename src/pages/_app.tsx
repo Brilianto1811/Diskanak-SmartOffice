@@ -91,7 +91,7 @@ const App = (props: ExtendedAppProps) => {
     <Provider store={store}>
       <CacheProvider value={emotionCache}>
         <Head>
-          <title>{`KOSMOS`}</title>
+          <title>{`EMS Diskanak`}</title>
           <meta name='description' content={`${themeConfig.templateName} – Website`} />
         </Head>
 

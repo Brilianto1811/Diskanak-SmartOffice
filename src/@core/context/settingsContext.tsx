@@ -54,7 +54,7 @@ interface SettingsProviderProps {
 }
 
 const initialSettings: Settings = {
-  themeColor: 'primary',
+  themeColor: 'warning', // INI BUAT GANTI WARNA UTAMA PADA SEMUA HALAMAN WEB
   mode: themeConfig.mode,
   skin: themeConfig.skin,
   footer: themeConfig.footer,

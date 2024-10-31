@@ -371,7 +371,7 @@ const Agenda = () => {
           }}
           sx={{
             backgroundColor: '#50C878',
-            color: 'black',
+            color: 'white',
             borderColor: '#03C04A',
             '&:hover': {
               color: 'black' // Warna teks saat tombol dihover

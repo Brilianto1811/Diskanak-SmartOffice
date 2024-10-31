@@ -16,4 +16,12 @@ module.exports = {
 
     return config
   }
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: 'https://external-api.com/:path*', // Ganti dengan API eksternal
+  //     },
+  //   ];
+  // },
 }

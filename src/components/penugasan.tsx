@@ -667,7 +667,7 @@ const TablePenugasan = () => {
               </span>
             </>
           }
-          style={{ backgroundColor: '#FBDB65', textAlign: 'center' }}
+          style={{ backgroundColor: '#f5b758', textAlign: 'center' }}
         />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
@@ -683,7 +683,7 @@ const TablePenugasan = () => {
           }}
           sx={{
             backgroundColor: '#50C878',
-            color: 'black',
+            color: 'white',
             borderColor: '#03C04A',
             '&:hover': {
               color: 'black' // Warna teks saat tombol dihover
@@ -694,7 +694,7 @@ const TablePenugasan = () => {
         </Button>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle
-            style={{ textAlign: 'center', backgroundColor: '#50C878', marginTop: '-15px', fontSize: '20px' }}
+            style={{ textAlign: 'center', backgroundColor: '#f5b758', marginTop: '-15px', fontSize: '20px' }}
           >
             Tambah Penugasan
           </DialogTitle>
@@ -1021,82 +1021,82 @@ const TablePenugasan = () => {
         </Dialog>
       </div>
       <div style={{ marginTop: '20px', marginBottom: '20px', marginLeft: '5px' }}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
-                label='Pilih Bulan dan Tahun'
-                value={selectedDate2.current}
-                onChange={date => handleDateChange(date as Dayjs | null)}
-                views={['year', 'month']}
-                format='YYYY-MM'
-              />
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DatePicker
+            label='Pilih Bulan dan Tahun'
+            value={selectedDate2.current}
+            onChange={date => handleDateChange(date as Dayjs | null)}
+            views={['year', 'month']}
+            format='YYYY-MM'
+          />
         </LocalizationProvider>
       </div>
       {loading && (
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column'
-            }}
-          >
-            <CircularProgress color='success' />
-            <p>Loading...</p>
-          </div>
-        )}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column'
+          }}
+        >
+          <CircularProgress color='success' />
+          <p>Loading...</p>
+        </div>
+      )}
       {dataLoaded && dataPenerimaTask ? (
-      <DataGrid
-        autoHeight
-        disableColumnFilter
-        columns={columns}
-        pageSizeOptions={[7, 10, 25, 50]}
-        paginationModel={paginationModel}
-        onPaginationModelChange={setPaginationModel}
-        rows={dataPenerimaTask}
-        sx={{
-          '& .MuiSvgIcon-root': {
-            fontSize: '1.125rem'
-          },
-          '& .MuiDataGrid-row:nth-of-type(odd)': {
-            backgroundColor: '#FAF9F6' // Ganti warna latar belakang untuk baris ganjil
-          },
-          '& .MuiDataGrid-row:nth-of-type(even)': {
-            backgroundColor: 'white' // Ganti warna latar belakang untuk baris genap
-          },
-          '& .MuiDataGrid-columnHeaders .MuiDataGrid-columnHeader': {
-            borderRight: '1px solid #e0e0e0' // Add right border to each header cell
-          },
-          '& .MuiDataGrid-cell': {
-            borderRight: '1px solid #e0e0e0' // Add right border to each cell
-          }
-        }}
-        slotProps={{
-          baseButton: {
-            size: 'medium',
-            variant: 'outlined'
-          }
-        }}
-      />
+        <DataGrid
+          autoHeight
+          disableColumnFilter
+          columns={columns}
+          pageSizeOptions={[7, 10, 25, 50]}
+          paginationModel={paginationModel}
+          onPaginationModelChange={setPaginationModel}
+          rows={dataPenerimaTask}
+          sx={{
+            '& .MuiSvgIcon-root': {
+              fontSize: '1.125rem'
+            },
+            '& .MuiDataGrid-row:nth-of-type(odd)': {
+              backgroundColor: '#FAF9F6' // Ganti warna latar belakang untuk baris ganjil
+            },
+            '& .MuiDataGrid-row:nth-of-type(even)': {
+              backgroundColor: 'white' // Ganti warna latar belakang untuk baris genap
+            },
+            '& .MuiDataGrid-columnHeaders .MuiDataGrid-columnHeader': {
+              borderRight: '1px solid #e0e0e0' // Add right border to each header cell
+            },
+            '& .MuiDataGrid-cell': {
+              borderRight: '1px solid #e0e0e0' // Add right border to each cell
+            }
+          }}
+          slotProps={{
+            baseButton: {
+              size: 'medium',
+              variant: 'outlined'
+            }
+          }}
+        />
       ) : (
         <Grid item xs={12}>
-                <Box
-                  borderRadius={2}
-                  p={2}
-                  textAlign='center'
-                  width='100%'
-                  minHeight='250px'
-                  display='flex'
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Box borderRadius={1}>
-                    <Typography variant='h6' style={{ color: '#CCCCCC' }}>
-                      Tidak ada Penugasan
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            )}
+          <Box
+            borderRadius={2}
+            p={2}
+            textAlign='center'
+            width='100%'
+            minHeight='250px'
+            display='flex'
+            alignItems='center'
+            justifyContent='center'
+          >
+            <Box borderRadius={1}>
+              <Typography variant='h6' style={{ color: '#CCCCCC' }}>
+                Tidak ada Penugasan
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+      )}
     </Card>
   )
 }

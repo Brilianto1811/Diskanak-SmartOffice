@@ -52,38 +52,38 @@ const RechartsBarChart = ({ direction }: Props) => {
 
   const getDataStatistik = async () => {
     try {
-        const responseDataTask = await GetStatistikTask();
-        const responseDataKeg = await GetStatistikKeg();
+      const responseDataTask = await GetStatistikTask();
+      const responseDataKeg = await GetStatistikKeg();
 
-        if (responseDataTask && responseDataTask.data) {
-            setDataTask(
-                responseDataTask.data.map(val => {
-                    return {
-                        name: val.comt_bidang,
-                        orang: val.jumlah_orang
-                    }
-                })
-            );
-        } else {
-            console.error("Error: Response data from GetStatistikTask is invalid.");
-        }
+      if (responseDataTask && responseDataTask.data) {
+        setDataTask(
+          responseDataTask.data.map(val => {
+            return {
+              name: val.comt_bidang,
+              orang: val.jumlah_orang
+            }
+          })
+        );
+      } else {
+        console.error("Error: Response data from GetStatistikTask is invalid.");
+      }
 
-        if (responseDataKeg && responseDataKeg.data) {
-            setDataKeg(
-                responseDataKeg.data.map(val => {
-                    return {
-                        name: val.comt_bidang,
-                        orang: val.jumlah_orang
-                    }
-                })
-            );
-        } else {
-            console.error("Error: Response data from GetStatistikKeg is invalid.");
-        }
+      if (responseDataKeg && responseDataKeg.data) {
+        setDataKeg(
+          responseDataKeg.data.map(val => {
+            return {
+              name: val.comt_bidang,
+              orang: val.jumlah_orang
+            }
+          })
+        );
+      } else {
+        console.error("Error: Response data from GetStatistikKeg is invalid.");
+      }
     } catch (error) {
-        console.error("Error:", error);
+      console.error("Error:", error);
     }
-};
+  };
 
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const RechartsBarChart = ({ direction }: Props) => {
                 <XAxis dataKey='name' reversed={direction === 'rtl'} />
                 <YAxis orientation={direction === 'rtl' ? 'right' : 'left'} />
                 <Tooltip content={CustomTooltip} />
-                <Bar dataKey='orang' stackId='a' fill='#826af9' />
+                <Bar dataKey='orang' stackId='a' fill='#f5b758' />
                 {/* <Bar dataKey='Pegawai' stackId='a' fill='#d2b0ff' /> */}
               </BarChart>
             </ResponsiveContainer>
@@ -119,7 +119,7 @@ const RechartsBarChart = ({ direction }: Props) => {
                 <XAxis dataKey='name' reversed={direction === 'rtl'} />
                 <YAxis orientation={direction === 'rtl' ? 'right' : 'left'} />
                 <Tooltip content={CustomTooltip} />
-                <Bar dataKey='orang' stackId='a' fill='#826af9' />
+                <Bar dataKey='orang' stackId='a' fill='#f5b758' />
                 {/* <Bar dataKey='Pegawai' stackId='a' fill='#d2b0ff' /> */}
               </BarChart>
             </ResponsiveContainer>

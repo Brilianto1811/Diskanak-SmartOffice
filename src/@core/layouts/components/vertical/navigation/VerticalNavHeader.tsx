@@ -106,10 +106,10 @@ const VerticalNavHeader = (props: Props) => {
       ) : (
         <LinkStyled href={`/${isasn}/dashboard`}>
           <img
-            src={'/images/diskominfo/logodiskanak.png'}
+            src={'/images/diskominfo/logoutama.png'}
             alt='Logo'
             width={'70'}
-            height={'80'}
+            height={'50'}
             style={{
               display: 'block',
               margin: '0 auto',
@@ -123,14 +123,15 @@ const VerticalNavHeader = (props: Props) => {
             sx={{ ...menuCollapsedStyles, ...(navCollapsed && !navHover ? {} : { ml: 2.5 }), marginTop: '2px' }}
           >
             <img
-              src={'/images/diskominfo/logoems.png'}
+              src={'/images/diskominfo/logotext.png'}
               alt='Logo'
               width={'120'}
-              height={'100'}
+              height={'70'}
               style={{
                 display: 'block',
                 margin: '0 auto',
-                // marginLeft: '-px',
+                marginTop: '10px',
+                marginBottom: '15px',
                 textAlign: 'center',
                 verticalAlign: 'middle'
               }}

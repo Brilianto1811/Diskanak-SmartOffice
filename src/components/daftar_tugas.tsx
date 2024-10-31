@@ -488,7 +488,7 @@ const CardDaftarTugas = () => {
               <span style={{ fontSize: '0.875rem', marginTop: '5px', color: '#555' }}>Daftar Tugas dari Atasan.</span>
             </>
           }
-          style={{ backgroundColor: '#FBDB65', textAlign: 'center', borderRadius: '8px' }}
+          style={{ backgroundColor: '#f5b758', textAlign: 'center', borderRadius: '8px' }}
         />
       </div>
       <Divider style={{ margin: '10px 0' }} />
@@ -536,10 +536,10 @@ const CardDaftarTugas = () => {
                             task.code_assign === 0
                               ? '#C41E3A' // Merah
                               : task.code_assign === 1
-                              ? '#fedc56' // Kuning
-                              : task.code_assign === 2
-                              ? '#00a86b' // Hijau
-                              : 'transparent', // Warna default atau kosong
+                                ? '#fedc56' // Kuning
+                                : task.code_assign === 2
+                                  ? '#00a86b' // Hijau
+                                  : 'transparent', // Warna default atau kosong
                           height: '380px'
                         }}
                       >
@@ -689,10 +689,10 @@ const CardDaftarTugas = () => {
                             task.code_assign === 0
                               ? '#ed2939' // Merah
                               : task.code_assign === 1
-                              ? '#FFBF00' // Kuning
-                              : task.code_assign === 2
-                              ? '#00a86b' // Hijau
-                              : 'transparent', // Warna default atau kosong
+                                ? '#FFBF00' // Kuning
+                                : task.code_assign === 2
+                                  ? '#00a86b' // Hijau
+                                  : 'transparent', // Warna default atau kosong
                           height: '450px'
                         }}
                       >
@@ -1055,10 +1055,10 @@ const CardDaftarTugas = () => {
                             task.code_assign === 0
                               ? '#ed2939' // Merah
                               : task.code_assign === 1
-                              ? '#FFBF00' // Kuning
-                              : task.code_assign === 2
-                              ? '#00a86b' // Hijau
-                              : 'transparent', // Warna default atau kosong
+                                ? '#FFBF00' // Kuning
+                                : task.code_assign === 2
+                                  ? '#00a86b' // Hijau
+                                  : 'transparent', // Warna default atau kosong
                           height: '400px'
                         }}
                       >

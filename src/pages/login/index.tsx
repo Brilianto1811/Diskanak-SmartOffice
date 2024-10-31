@@ -18,7 +18,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 // ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'
-import { Autocomplete, TextField } from '@mui/material'
+import { Autocomplete, TextField, Typography } from '@mui/material'
 import { ResponseDataMdPegawai, DataMdPegawai } from 'src/models/data-md-pegawai'
 
 import api from 'src/utils/api'
@@ -205,7 +205,17 @@ const LoginPage = () => {
   }
 
   return (
-    <Box className='content-right' sx={{ backgroundImage: 'url(/images/diskominfo/depandiskanak.jpg)', }}>
+    <Box
+      className="content-right"
+      sx={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/diskominfo/depandiskanak.jpg)`,
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+        // width: '100%',
+        // minHeight: '100vh',
+        color: 'white',
+      }}
+    >
       {!hidden ? (
         <Box
           sx={{
@@ -236,20 +246,7 @@ const LoginPage = () => {
       >
         <Box sx={{ mt: 5 }}>
           <img
-            src={'/images/diskominfo/logodiskanak.png'}
-            alt='Logo'
-            width={'200'}
-            style={{
-              maxWidth: '100%',
-              maxHeight: '100vh',
-              display: 'block',
-              margin: '0 auto',
-              textAlign: 'center',
-              verticalAlign: 'middle'
-            }}
-          />
-          <img
-            src={'/images/diskominfo/logoems.png'}
+            src={'/images/diskominfo/logoutama.png'}
             alt='Logo'
             width={'200'}
             style={{
@@ -260,14 +257,14 @@ const LoginPage = () => {
             }}
           />
         </Box>
-        {/* <Box>
+        <Box>
           <Typography
             variant='h1'
-            sx={{ mb: 1.5, textAlign: 'center', color: 'black', fontSize: '20px', marginTop: '5px' }}
+            sx={{ mb: 1.5, textAlign: 'center', color: '#f5b758', fontSize: '20px', marginTop: '5px' }}
           >
-            {`Login Sebagai`}
+            {`EMPLOYEE MANAGEMENT SYSTEM`}
           </Typography>
-        </Box> */}
+        </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
           <Button
             variant='contained'
@@ -375,7 +372,7 @@ const LoginPage = () => {
           </Box>
           <Box sx={{ width: 325 }}>
             <ReCAPTCHA sitekey='6LcqlQApAAAAAG8L-MgTHY9xmuTF8BQABAad5pFv' onChange={handleCaptchaChange} />
-            {/* 6LdyUkEpAAAAAALiZ4K_dMeY1Kgcfd4ygghzgU6M */}
+            {/* 6LfTHG8qAAAAAFMpdIOEJKgKDn1GWmXgBY5lqrYN */}
             <Button
               fullWidth
               type='submit'

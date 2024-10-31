@@ -341,7 +341,7 @@ const TableValidasi = () => {
                 </span>
               </>
             }
-            style={{ backgroundColor: '#FBDB65', textAlign: 'center' }}
+            style={{ backgroundColor: '#f5b758', textAlign: 'center' }}
           />
         </div>
         <div style={{ marginTop: '20px', marginBottom: '20px', marginLeft: '5px' }}>

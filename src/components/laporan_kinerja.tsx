@@ -274,7 +274,7 @@ const LaporanKinerja = () => {
   return (
     <>
       <style>
-      {`
+        {`
         @media print {
           @page {
             margin-top: 2cm;
@@ -291,7 +291,7 @@ const LaporanKinerja = () => {
           }
         }
       `}
-    </style>
+      </style>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
           label='Pilih Bulan dan Tahun'
@@ -325,7 +325,7 @@ const LaporanKinerja = () => {
             marginRight: '40px'
           }}
         >
-          <Typography variant='h5'>LAPORAN KINERJA PEGAWAI</Typography>
+          <Typography variant='h5'>LAPORAN KINERJA PEGAWAI NON ASN</Typography>
         </div>
         <div
           style={{
@@ -338,8 +338,7 @@ const LaporanKinerja = () => {
           }}
         >
           <Typography sx={{ color: 'text.secondary', marginBottom: '10px' }}>
-            <span style={{ display: 'inline-block', width: '5cm' }}>Kepada</span> : Yth. Sekretaris Dinas Komunikasi Dan
-            Informatika
+            <span style={{ display: 'inline-block', width: '5cm' }}>Kepada</span> : Yth. Sekretaris Dinas Perikanan dan Peternakan
           </Typography>
           <Typography sx={{ color: 'text.secondary', marginBottom: '10px' }}>
             <span style={{ display: 'inline-block', width: '5cm' }}>Dari</span> :{' '}
@@ -365,10 +364,10 @@ const LaporanKinerja = () => {
           }}
         >
           <Typography sx={{ color: 'text.secondary', marginBottom: '10px' }}>
-            Dengan ini disampaikan laporan kinerja pegawai selama bulan {monthReport} {yearReport}, pada{' '}
+            Dengan ini disampaikan laporan kinerja pegawai Non ASN selama bulan {monthReport} {yearReport}, pada{' '}
             {dataOptionById && dataOptionById.length > 0 ? dataOptionById[0].name_bidangsub : '-'},{' '}
-            {dataOptionById && dataOptionById.length > 0 ? dataOptionById[0].name_bidang : '-'} dan Dinas Komunikasi dan
-            Informatika, sebagai berikut:
+            {dataOptionById && dataOptionById.length > 0 ? dataOptionById[0].name_bidang : '-'} dan Dinas Perikanan dan
+            Peternakan, sebagai berikut:
           </Typography>
         </div>
         <table style={{ width: '100%', marginTop: '20px', borderCollapse: 'collapse' }}></table>
@@ -409,9 +408,8 @@ const LaporanKinerja = () => {
                         <td style={{ border: '1px solid', padding: '8px' }}>
                           {
                             item.code_assign === 1 // Hanya jika code_assign === 1
-                              ? `[${convertToHHMM(item.jam_offkeg)}] - [${convertToHHMM(item.jam_offkeg2)}] ${
-                                  item.cap_offkeg
-                                }`
+                              ? `[${convertToHHMM(item.jam_offkeg)}] - [${convertToHHMM(item.jam_offkeg2)}] ${item.cap_offkeg
+                              }`
                               : null // Jika tidak, kembalikan null atau bisa juga tampilkan pesan lain
                           }
                         </td>
@@ -483,7 +481,7 @@ const LaporanKinerja = () => {
         >
           <Button
             variant='contained'
-            color='primary'
+            color='warning'
             sx={{
               '@media print': {
                 display: 'none'
