@@ -119,7 +119,14 @@ const LoginPage = () => {
 
   const theme = useTheme()
 
-  const hidden = useMediaQuery(theme.breakpoints.down('md'))
+  const hidden = useMediaQuery(theme.breakpoints.down('lg'))
+
+  let luas = '100%'
+  if (!hidden) {
+    luas = '25%'
+  } else {
+    luas = '100%'
+  }
 
   useEffect(() => {
     initFirst()
@@ -215,9 +222,9 @@ const LoginPage = () => {
       ) : null}
       <Box
         sx={{
-          padding: '50px',
           display: 'flex',
           alignItems: 'center',
+          width: luas,
           justifyContent: 'center',
           flexDirection: 'column',
           color: 'white',
