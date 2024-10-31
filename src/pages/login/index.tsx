@@ -31,7 +31,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { SubmitHandler } from 'react-hook-form'
 
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { styled, useTheme } from '@mui/material/styles'
+import { useTheme } from '@mui/material/styles'
 
 const schema = yup.object().shape({
   password: yup.string().required()
@@ -121,19 +121,6 @@ const LoginPage = () => {
 
   const hidden = useMediaQuery(theme.breakpoints.down('md'))
 
-  const LoginIllustration = styled('img')(({ theme }) => ({
-    zIndex: 2,
-    maxHeight: 680,
-    marginTop: theme.spacing(12),
-    marginBottom: theme.spacing(12),
-    [theme.breakpoints.down(1540)]: {
-      maxHeight: 550
-    },
-    [theme.breakpoints.down('lg')]: {
-      maxHeight: 500
-    }
-  }))
-
   useEffect(() => {
     initFirst()
   }, [])
@@ -208,6 +195,7 @@ const LoginPage = () => {
       sx={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/diskominfo/depandiskanak.jpg)`,
         color: 'white',
+        backgroundSize: '75% auto',
       }}
     >
       {!hidden ? (
