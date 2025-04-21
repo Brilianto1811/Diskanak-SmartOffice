@@ -360,8 +360,8 @@ const LoginPage = () => {
             />
           </Box>
           <Box sx={{ width: 325 }}>
-            <ReCAPTCHA sitekey='6LfTHG8qAAAAAFMpdIOEJKgKDn1GWmXgBY5lqrYN' onChange={handleCaptchaChange} />
-            {/* 6LcqlQApAAAAAG8L-MgTHY9xmuTF8BQABAad5pFv */}
+            <ReCAPTCHA sitekey='6LcqlQApAAAAAG8L-MgTHY9xmuTF8BQABAad5pFv' onChange={handleCaptchaChange} />
+            {/* 6LfTHG8qAAAAAFMpdIOEJKgKDn1GWmXgBY5lqrYN */}
             <Button
               fullWidth
               type='submit'
